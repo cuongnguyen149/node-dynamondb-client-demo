@@ -1,31 +1,21 @@
 <div class="container">
+  <h3>List User</h3>
+
   <table class="table">
     <thead>
       <tr>
         <th scope="col">User Name</th>
         <th scope="col">Date Of Birth</th>
-        <th scope="col">Age</th>
+        <th scope="col">Zip Code</th>
         <th scope="col">Email</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor="let user of users">
+        <td>{{user.userName}}</td>
+        <td>{{user.dob}}</td>
+        <td>{{user.zipCode}}</td>
+        <td>{{user.email}}</td>
       </tr>
     </tbody>
   </table>

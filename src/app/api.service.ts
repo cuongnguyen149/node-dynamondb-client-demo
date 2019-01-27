@@ -37,4 +37,23 @@ export class ApiService {
       map(this.extractData),
       catchError(this.handleError));
   }
+  createUser(data): Observable<any> {
+    return this.http.post(apiUrl, data, httpOptions).pipe(
+      catchError(this.handleError)
+    );
+  }
+  updateUser(data): Observable<any> {
+    return this.http.put(apiUrl, data, httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  deleteUser(id: string): Observable<{}> {
+    const url = `${apiUrl}/${id}`;
+    return this.http.delete(url, httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
 }

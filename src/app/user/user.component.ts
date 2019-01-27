@@ -12,7 +12,7 @@ export class UserComponent implements OnInit {
   ngOnInit() {
     this.api.getUsers().subscribe(res => {
       console.log(res);
-      this.users = res;
+      this.users = res.Items;
     }, err => {
       console.log(err);
     })
