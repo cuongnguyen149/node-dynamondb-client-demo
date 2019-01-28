@@ -37,13 +37,20 @@ export class ApiService {
       map(this.extractData),
       catchError(this.handleError));
   }
+  getUsersById(id): Observable<any> {
+    const url = `${apiUrl}/${id}`;
+    return this.http.get(url, httpOptions).pipe(
+      map(this.extractData),
+      catchError(this.handleError));
+  }
   createUser(data): Observable<any> {
     return this.http.post(apiUrl, data, httpOptions).pipe(
       catchError(this.handleError)
     );
   }
-  updateUser(data): Observable<any> {
-    return this.http.put(apiUrl, data, httpOptions)
+  updateUser(id, data): Observable<any> {
+    const url = `${apiUrl}/${id}`;
+    return this.http.put(url, data, httpOptions)
       .pipe(
         catchError(this.handleError)
       );

@@ -1,6 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<nav class="nav">
+<!-- <nav class="nav">
   <a class="nav-link active" href="/user-create">Register User</a>
   <a class="nav-link" href="/users">List User</a>
+</nav> -->
+<nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
+  <div class="container">
+    <a class="navbar-brand" href="#">Demo DynamoDb</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link scroll-link" href="/user-create">Register User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll-link" href="/users">List User</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 <router-outlet></router-outlet>
+<notifier-container></notifier-container>

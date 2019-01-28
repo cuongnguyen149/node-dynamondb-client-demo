@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container margin-top-100">
   <h3>List User</h3>
 
   <table class="table">
@@ -8,14 +8,19 @@
         <th scope="col">Date Of Birth</th>
         <th scope="col">Zip Code</th>
         <th scope="col">Email</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let user of users">
         <td>{{user.userName}}</td>
         <td>{{user.dob}}</td>
-        <td>{{user.zipCode}}</td>
+        <td>{{user.zipcode}}</td>
         <td>{{user.email}}</td>
+        <td>
+          <button (click)="editUser(user)" type="button" class="btn btn-primary btn-sm margin-right-10">Edit</button>
+          <button (click)="remoteUser(user)" type="button" class="btn btn-danger btn-sm">Delete</button>
+        </td>
       </tr>
     </tbody>
   </table>
