@@ -21,3 +21,7 @@ run:
 ```
   npm start
 ```
+```
+  ### Your app will run on port 4200
+  http://localhost:4200
+```
